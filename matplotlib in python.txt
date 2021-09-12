@@ -1,0 +1,41 @@
+What is Matplotlib?
+Matplotlib is a low level graph plotting library in python that serves as a visualization utility.
+
+Matplotlib was created by John D. Hunter.
+
+Matplotlib is open source and we can use it freely.
+
+Matplotlib is mostly written in python, a few segments are written in C, Objective-C and Javascript for Platform compatibility.
+
+
+bins in histograms is width of each column 
+ # part 1 
+x = [_ for _ in range(0,10)]
+y = [_*_ for _ in range(0,10)]  #--------> it will square the number 
+
+fig = plt.figure()
+ax = fig.gca() # gca mean get current axis 
+
+ax.set_xticks(np.arange(0, 10, 1))
+ax.set_yticks(np.arange(0,100,10))
+
+plt.scatter(x,y)
+
+plt.grid()
+
+plt.show()
+
+#part2 
+plt.plot([x for x in range(0,10)])  # it will plot the simple graph 
+
+#part3 
+plt.plot([x * x for x in range(0, 10, 1)], 'red', marker='p')
+plt.plot([x * x for x in range(9, -1, -1)], 'green', marker='p')
+plt.show()
+
+#part3 
+data = [10,15,15,10,20,20,1,14,10,12,14]
+plt.hist(data)
+plt.show()
+
+
